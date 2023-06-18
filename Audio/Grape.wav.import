@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Grape.wav-9403a53419a838b9d65142ac1563d07d.sample"
+
+[deps]
+
+source_file="res://Audio/Grape.wav"
+dest_files=[ "res://.import/Grape.wav-9403a53419a838b9d65142ac1563d07d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

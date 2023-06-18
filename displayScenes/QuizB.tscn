@@ -1,0 +1,282 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://sprites/bg/BG3.png" type="Texture" id=1]
+[ext_resource path="res://sprites/buttons/Next.png" type="Texture" id=2]
+[ext_resource path="res://sprites/buttons/Next_down.png" type="Texture" id=3]
+[ext_resource path="res://sprites/buttons/Submit_down.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://sprites/buttons/Submit.png" type="Texture" id=6]
+[ext_resource path="res://fonts/dynamicFonts/translation.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/dynamicFonts/word.tres" type="DynamicFont" id=8]
+[ext_resource path="res://fonts/dynamicFonts/sentence.tres" type="DynamicFont" id=9]
+[ext_resource path="res://displayScenes/QuizB.gd" type="Script" id=10]
+[ext_resource path="res://sprites/buttons/quizButtons/A.png" type="Texture" id=11]
+[ext_resource path="res://sprites/buttons/quizButtons/A_Down.png" type="Texture" id=12]
+[ext_resource path="res://sprites/buttons/quizButtons/A_Hover.png" type="Texture" id=13]
+[ext_resource path="res://sprites/buttons/quizButtons/C_Down.png" type="Texture" id=14]
+[ext_resource path="res://sprites/buttons/quizButtons/B.png" type="Texture" id=15]
+[ext_resource path="res://sprites/buttons/quizButtons/B_Hover.png" type="Texture" id=16]
+[ext_resource path="res://sprites/buttons/quizButtons/B_Down.png" type="Texture" id=17]
+[ext_resource path="res://sprites/buttons/quizButtons/C.png" type="Texture" id=18]
+[ext_resource path="res://sprites/buttons/quizButtons/C_Hover.png" type="Texture" id=19]
+[ext_resource path="res://sprites/buttons/quizButtons/D.png" type="Texture" id=20]
+[ext_resource path="res://sprites/buttons/quizButtons/D_Down.png" type="Texture" id=21]
+[ext_resource path="res://sprites/buttons/quizButtons/D_Hover.png" type="Texture" id=22]
+[ext_resource path="res://scenes/MusicPlayer.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/QuizBack.tscn" type="PackedScene" id=24]
+
+[node name="QuizB" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -491.0
+margin_top = -303.5
+margin_right = 232.0
+margin_bottom = 303.5
+alignment = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="QuestionTitle" type="Label" parent="VBoxContainer"]
+margin_right = 724.0
+margin_bottom = 31.0
+custom_fonts/font = ExtResource( 9 )
+text = "Manakah yang merupakan arti dari"
+align = 1
+valign = 1
+
+[node name="Question" type="Label" parent="VBoxContainer"]
+margin_top = 35.0
+margin_right = 724.0
+margin_bottom = 191.0
+custom_fonts/font = ExtResource( 8 )
+text = "Question"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 195.0
+margin_right = 724.0
+margin_bottom = 607.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+margin_right = 724.0
+margin_bottom = 204.0
+alignment = 1
+
+[node name="Option1" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 360.0
+margin_bottom = 204.0
+alignment = 1
+
+[node name="Button1" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer/Option1"]
+margin_right = 360.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+toggle_mode = true
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 11 )
+expand = true
+stretch_mode = 3
+
+[node name="Label1" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/Option1"]
+margin_top = 132.0
+margin_right = 360.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 360, 72 )
+custom_fonts/font = ExtResource( 7 )
+text = "Opsi 2"
+align = 1
+
+[node name="Option2" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 364.0
+margin_right = 724.0
+margin_bottom = 204.0
+alignment = 1
+
+[node name="Button2" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer/Option2"]
+margin_right = 360.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+toggle_mode = true
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 16 )
+texture_disabled = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/Option2"]
+margin_top = 132.0
+margin_right = 360.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 360, 72 )
+custom_fonts/font = ExtResource( 7 )
+text = "Opsi 2"
+align = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 208.0
+margin_right = 724.0
+margin_bottom = 412.0
+alignment = 1
+
+[node name="Option3" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 360.0
+margin_bottom = 204.0
+alignment = 1
+
+[node name="Button3" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer2/Option3"]
+margin_right = 360.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+toggle_mode = true
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 18 )
+expand = true
+stretch_mode = 3
+
+[node name="Label3" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2/Option3"]
+margin_top = 132.0
+margin_right = 360.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 360, 72 )
+custom_fonts/font = ExtResource( 7 )
+text = "Opsi 2"
+align = 1
+
+[node name="Option4" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 364.0
+margin_right = 724.0
+margin_bottom = 204.0
+alignment = 1
+
+[node name="Button4" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer2/Option4"]
+margin_right = 360.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+toggle_mode = true
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 22 )
+texture_disabled = ExtResource( 20 )
+expand = true
+stretch_mode = 3
+
+[node name="Label4" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2/Option4"]
+margin_top = 132.0
+margin_right = 360.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 360, 72 )
+custom_fonts/font = ExtResource( 7 )
+text = "Opsi 2"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -310.37
+margin_top = -120.353
+margin_right = -50.3698
+margin_bottom = -56.3527
+alignment = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Submit" type="TextureButton" parent="HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 4 )
+
+[node name="Next" type="TextureButton" parent="HBoxContainer"]
+margin_left = 132.0
+margin_right = 260.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -455.0
+margin_top = 179.51
+margin_right = -23.0
+margin_bottom = 538.51
+alignment = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerResult" type="TextureRect" parent="VBoxContainer2"]
+margin_right = 432.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
+texture = ExtResource( 5 )
+stretch_mode = 4
+
+[node name="Result" type="Label" parent="VBoxContainer2"]
+margin_top = 260.0
+margin_right = 432.0
+margin_bottom = 359.0
+custom_fonts/font = ExtResource( 9 )
+text = "Jawabanmu Kurang Tepat!
+Jawaban yang tepat adalah:
+"
+align = 1
+valign = 1
+
+[node name="Timer" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -280.67
+margin_top = 48.812
+margin_right = -145.67
+margin_bottom = 108.812
+custom_fonts/font = ExtResource( 7 )
+text = "00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicPlayer" parent="." instance=ExtResource( 23 )]
+
+[node name="QuizBack" parent="." instance=ExtResource( 24 )]
+
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer/Option1/Button1" to="." method="_on_Button1_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer/Option2/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer2/Option3/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer2/Option4/Button4" to="." method="_on_Button4_button_down"]
+[connection signal="button_down" from="HBoxContainer/Submit" to="." method="_on_Submit_button_down"]
+[connection signal="button_down" from="HBoxContainer/Next" to="." method="_on_Next_button_down"]

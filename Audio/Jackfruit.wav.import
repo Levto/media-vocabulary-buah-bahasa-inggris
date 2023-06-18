@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Jackfruit.wav-f553ce0e615d53349dea6b8971a53daf.sample"
+
+[deps]
+
+source_file="res://Audio/Jackfruit.wav"
+dest_files=[ "res://.import/Jackfruit.wav-f553ce0e615d53349dea6b8971a53daf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

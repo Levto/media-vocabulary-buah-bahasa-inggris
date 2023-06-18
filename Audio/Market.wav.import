@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Market.wav-31095e2c6d59da597d736ebdd89a889e.sample"
+
+[deps]
+
+source_file="res://Audio/Market.wav"
+dest_files=[ "res://.import/Market.wav-31095e2c6d59da597d736ebdd89a889e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

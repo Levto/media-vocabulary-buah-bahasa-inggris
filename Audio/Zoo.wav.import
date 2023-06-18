@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Zoo.wav-03ef26235cc7d1dc2678e12a0c5e9d78.sample"
+
+[deps]
+
+source_file="res://Audio/Zoo.wav"
+dest_files=[ "res://.import/Zoo.wav-03ef26235cc7d1dc2678e12a0c5e9d78.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

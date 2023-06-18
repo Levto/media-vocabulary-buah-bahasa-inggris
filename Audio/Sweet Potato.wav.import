@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sweet Potato.wav-e1d6022255d0d24a4c2a9db4c29181d5.sample"
+
+[deps]
+
+source_file="res://Audio/Sweet Potato.wav"
+dest_files=[ "res://.import/Sweet Potato.wav-e1d6022255d0d24a4c2a9db4c29181d5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

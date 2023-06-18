@@ -1,0 +1,283 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://scenes/AlphabetButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/BackButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/bg/BG2.png" type="Texture" id=3]
+[ext_resource path="res://fonts/ProductSans-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://sprites/icons/Bean Sprout.png" type="Texture" id=5]
+[ext_resource path="res://sprites/icons/Banana.png" type="Texture" id=6]
+[ext_resource path="res://sprites/icons/Avocado.png" type="Texture" id=7]
+[ext_resource path="res://sprites/icons/Eggplant.png" type="Texture" id=8]
+[ext_resource path="res://sprites/icons/Grape.png" type="Texture" id=9]
+[ext_resource path="res://sprites/icons/Jackfruit.png" type="Texture" id=10]
+[ext_resource path="res://sprites/icons/Lime.png" type="Texture" id=11]
+[ext_resource path="res://sprites/icons/Cucumber.png" type="Texture" id=12]
+[ext_resource path="res://sprites/icons/Carrot.png" type="Texture" id=13]
+[ext_resource path="res://sprites/icons/Dates.png" type="Texture" id=14]
+[ext_resource path="res://sprites/icons/Mango.png" type="Texture" id=15]
+[ext_resource path="res://sprites/icons/Soursop.png" type="Texture" id=16]
+[ext_resource path="res://sprites/icons/Sweet Potato.png" type="Texture" id=17]
+[ext_resource path="res://sprites/icons/Watermelon.png" type="Texture" id=18]
+[ext_resource path="res://sprites/icons/Mosque.png" type="Texture" id=19]
+[ext_resource path="res://sprites/icons/Beach.png" type="Texture" id=20]
+[ext_resource path="res://sprites/icons/Library.png" type="Texture" id=21]
+[ext_resource path="res://sprites/icons/Church.png" type="Texture" id=22]
+[ext_resource path="res://sprites/icons/Factory.png" type="Texture" id=23]
+[ext_resource path="res://sprites/icons/Hospital.png" type="Texture" id=24]
+[ext_resource path="res://sprites/icons/Airport.png" type="Texture" id=25]
+[ext_resource path="res://sprites/icons/Grocery.png" type="Texture" id=26]
+[ext_resource path="res://sprites/icons/Office.png" type="Texture" id=27]
+[ext_resource path="res://sprites/icons/Zoo.png" type="Texture" id=28]
+[ext_resource path="res://sprites/icons/Bus Stop.png" type="Texture" id=29]
+[ext_resource path="res://sprites/icons/Harbor.png" type="Texture" id=30]
+[ext_resource path="res://sprites/icons/Market.png" type="Texture" id=31]
+[ext_resource path="res://scenes/MusicPlayer.tscn" type="PackedScene" id=32]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 4 )
+
+[node name="AZMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AlphabetButtons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -460.0
+margin_top = -674.0
+margin_right = 460.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="AlphabetButtons"]
+margin_right = 920.0
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 1 )
+text = "Fruits and Vegetables
+(Buah dan Sayur)"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AlphabetButtons"]
+margin_top = 69.0
+margin_right = 920.0
+margin_bottom = 197.0
+rect_min_size = Vector2( 128, 128 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A" parent="AlphabetButtons/HBoxContainer" instance=ExtResource( 1 )]
+texture_normal = ExtResource( 7 )
+alphabet = 1
+
+[node name="B" parent="AlphabetButtons/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 132.0
+margin_right = 260.0
+texture_normal = ExtResource( 6 )
+alphabet = 2
+
+[node name="C" parent="AlphabetButtons/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 264.0
+margin_right = 392.0
+texture_normal = ExtResource( 5 )
+alphabet = 3
+
+[node name="D" parent="AlphabetButtons/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 396.0
+margin_right = 524.0
+texture_normal = ExtResource( 13 )
+alphabet = 4
+
+[node name="E" parent="AlphabetButtons/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 528.0
+margin_right = 656.0
+texture_normal = ExtResource( 12 )
+alphabet = 5
+
+[node name="F" parent="AlphabetButtons/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 660.0
+margin_right = 788.0
+texture_normal = ExtResource( 14 )
+alphabet = 6
+
+[node name="G" parent="AlphabetButtons/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 792.0
+margin_right = 920.0
+texture_normal = ExtResource( 8 )
+alphabet = 7
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="AlphabetButtons"]
+margin_top = 201.0
+margin_right = 920.0
+margin_bottom = 329.0
+rect_min_size = Vector2( 128, 128 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="H" parent="AlphabetButtons/HBoxContainer2" instance=ExtResource( 1 )]
+texture_normal = ExtResource( 9 )
+alphabet = 8
+
+[node name="I" parent="AlphabetButtons/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 132.0
+margin_right = 260.0
+texture_normal = ExtResource( 10 )
+alphabet = 9
+
+[node name="J" parent="AlphabetButtons/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 264.0
+margin_right = 392.0
+texture_normal = ExtResource( 11 )
+alphabet = 10
+
+[node name="K" parent="AlphabetButtons/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 396.0
+margin_right = 524.0
+texture_normal = ExtResource( 15 )
+alphabet = 11
+
+[node name="L" parent="AlphabetButtons/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 528.0
+margin_right = 656.0
+texture_normal = ExtResource( 16 )
+alphabet = 12
+
+[node name="M" parent="AlphabetButtons/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 660.0
+margin_right = 788.0
+texture_normal = ExtResource( 17 )
+alphabet = 13
+
+[node name="N" parent="AlphabetButtons/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 792.0
+margin_right = 920.0
+texture_normal = ExtResource( 18 )
+alphabet = 14
+
+[node name="Label2" type="Label" parent="AlphabetButtons"]
+margin_top = 333.0
+margin_right = 920.0
+margin_bottom = 398.0
+custom_fonts/font = SubResource( 2 )
+text = "Public Places
+(Tempat-Tempat Umum)"
+align = 1
+valign = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="AlphabetButtons"]
+margin_top = 402.0
+margin_right = 920.0
+margin_bottom = 530.0
+rect_min_size = Vector2( 128, 128 )
+alignment = 1
+
+[node name="O" parent="AlphabetButtons/HBoxContainer3" instance=ExtResource( 1 )]
+texture_normal = ExtResource( 25 )
+alphabet = 15
+
+[node name="P" parent="AlphabetButtons/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 132.0
+margin_right = 260.0
+texture_normal = ExtResource( 20 )
+alphabet = 16
+
+[node name="Q" parent="AlphabetButtons/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 264.0
+margin_right = 392.0
+texture_normal = ExtResource( 29 )
+alphabet = 17
+
+[node name="R" parent="AlphabetButtons/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 396.0
+margin_right = 524.0
+texture_normal = ExtResource( 22 )
+alphabet = 18
+
+[node name="S" parent="AlphabetButtons/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 528.0
+margin_right = 656.0
+texture_normal = ExtResource( 23 )
+alphabet = 19
+
+[node name="T" parent="AlphabetButtons/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 660.0
+margin_right = 788.0
+texture_normal = ExtResource( 26 )
+alphabet = 20
+
+[node name="U" parent="AlphabetButtons/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 792.0
+margin_right = 920.0
+texture_normal = ExtResource( 30 )
+alphabet = 21
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="AlphabetButtons"]
+margin_top = 534.0
+margin_right = 920.0
+margin_bottom = 662.0
+rect_min_size = Vector2( 128, 128 )
+alignment = 1
+
+[node name="V" parent="AlphabetButtons/HBoxContainer4" instance=ExtResource( 1 )]
+margin_left = 66.0
+margin_right = 194.0
+texture_normal = ExtResource( 24 )
+alphabet = 22
+
+[node name="W" parent="AlphabetButtons/HBoxContainer4" instance=ExtResource( 1 )]
+margin_left = 198.0
+margin_right = 326.0
+texture_normal = ExtResource( 21 )
+alphabet = 23
+
+[node name="X" parent="AlphabetButtons/HBoxContainer4" instance=ExtResource( 1 )]
+margin_left = 330.0
+margin_right = 458.0
+texture_normal = ExtResource( 31 )
+alphabet = 24
+
+[node name="Y" parent="AlphabetButtons/HBoxContainer4" instance=ExtResource( 1 )]
+margin_left = 462.0
+margin_right = 590.0
+texture_normal = ExtResource( 19 )
+alphabet = 25
+
+[node name="Z" parent="AlphabetButtons/HBoxContainer4" instance=ExtResource( 1 )]
+margin_left = 594.0
+margin_right = 722.0
+texture_normal = ExtResource( 27 )
+alphabet = 26
+
+[node name="AA" parent="AlphabetButtons/HBoxContainer4" instance=ExtResource( 1 )]
+margin_left = 726.0
+margin_right = 854.0
+texture_normal = ExtResource( 28 )
+alphabet = 27
+
+[node name="Back" parent="." instance=ExtResource( 2 )]
+targetSceneName = "MainMenu"
+
+[node name="MusicPlayer" parent="." instance=ExtResource( 32 )]

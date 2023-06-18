@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://QuizResult.gd" type="Script" id=1]
+[ext_resource path="res://fonts/dynamicFonts/word.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/dynamicFonts/sentence.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/BackButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/bg/BG2.png" type="Texture" id=5]
+[ext_resource path="res://scenes/MusicPlayer.tscn" type="PackedScene" id=6]
+
+[node name="QuizResult" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -268.0
+margin_top = -165.5
+margin_right = 268.0
+margin_bottom = 165.5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Greeting" type="Label" parent="VBoxContainer"]
+margin_right = 536.0
+margin_bottom = 31.0
+custom_fonts/font = ExtResource( 3 )
+text = "Selamat, kamu telah menyelesaikan quiz! Skor kamu"
+align = 1
+valign = 1
+
+[node name="Score" type="Label" parent="VBoxContainer"]
+margin_top = 35.0
+margin_right = 536.0
+margin_bottom = 191.0
+custom_fonts/font = ExtResource( 2 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="Comment" type="Label" parent="VBoxContainer"]
+margin_top = 195.0
+margin_right = 536.0
+margin_bottom = 226.0
+custom_fonts/font = ExtResource( 3 )
+text = "Skor Sempurna!"
+align = 1
+valign = 1
+
+[node name="CorrectAnswer" type="Label" parent="VBoxContainer"]
+margin_top = 230.0
+margin_right = 536.0
+margin_bottom = 261.0
+custom_fonts/font = ExtResource( 3 )
+text = "Jawaban Benar: 10"
+align = 1
+valign = 1
+
+[node name="WrongAnswer" type="Label" parent="VBoxContainer"]
+margin_top = 265.0
+margin_right = 536.0
+margin_bottom = 296.0
+custom_fonts/font = ExtResource( 3 )
+text = "Jawaban Salah: 0"
+align = 1
+valign = 1
+
+[node name="Time" type="Label" parent="VBoxContainer"]
+margin_top = 300.0
+margin_right = 536.0
+margin_bottom = 331.0
+custom_fonts/font = ExtResource( 3 )
+text = "Waktu pengerjaan : 5:21"
+align = 1
+valign = 1
+
+[node name="Back" parent="." instance=ExtResource( 4 )]
+targetSceneName = "QuizMenu"
+
+[node name="Tips" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -343.5
+margin_top = -88.2111
+margin_right = 343.5
+margin_bottom = -57.2111
+custom_fonts/font = ExtResource( 3 )
+text = "Dapatkan skor 80 atau lebih untuk mendapatkan tiket quiz spesial!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicPlayer" parent="." instance=ExtResource( 6 )]

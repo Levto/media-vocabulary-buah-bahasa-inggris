@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Beach.wav-c6ca06263408e1ced785df297c7e5de2.sample"
+
+[deps]
+
+source_file="res://Audio/Beach.wav"
+dest_files=[ "res://.import/Beach.wav-c6ca06263408e1ced785df297c7e5de2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

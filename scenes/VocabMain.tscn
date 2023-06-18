@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/buttons/Listen.png" type="Texture" id=1]
+[ext_resource path="res://fonts/dynamicFonts/word.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/dynamicFonts/sentence.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/dynamicFonts/translation.tres" type="DynamicFont" id=4]
+[ext_resource path="res://256x256.png" type="Texture" id=5]
+[ext_resource path="res://scenes/VocabMain.gd" type="Script" id=6]
+[ext_resource path="res://sprites/buttons/Listen_down.png" type="Texture" id=7]
+
+[node name="VocabMain" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -499.0
+margin_top = -220.5
+margin_right = 499.0
+margin_bottom = 220.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 998.0
+margin_bottom = 441.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 113.0
+margin_right = 393.0
+margin_bottom = 441.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer1"]
+margin_top = 54.0
+margin_right = 280.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 280, 256 )
+texture = ExtResource( 5 )
+stretch_mode = 4
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer1"]
+margin_top = 314.0
+margin_right = 280.0
+margin_bottom = 386.0
+rect_min_size = Vector2( 280, 72 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+expand = true
+stretch_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 397.0
+margin_right = 884.0
+margin_bottom = 441.0
+alignment = 1
+
+[node name="Word" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 93.0
+margin_right = 487.0
+margin_bottom = 249.0
+rect_min_size = Vector2( 325, 156 )
+custom_fonts/font = ExtResource( 2 )
+text = "Word"
+valign = 2
+
+[node name="Translation" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 253.0
+margin_right = 487.0
+margin_bottom = 313.0
+rect_min_size = Vector2( 477, 0 )
+custom_fonts/font = ExtResource( 4 )
+text = "Translation placeholder"
+valign = 1
+
+[node name="Sentence" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 317.0
+margin_right = 487.0
+margin_bottom = 348.0
+rect_min_size = Vector2( 477, 0 )
+custom_fonts/font = ExtResource( 3 )
+text = "Sentence placeholder"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 1.0
+
+[connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer1/TextureButton" to="." method="_on_TextureButton_button_down"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

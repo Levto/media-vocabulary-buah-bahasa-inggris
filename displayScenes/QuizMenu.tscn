@@ -1,0 +1,143 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://fonts/dynamicFonts/word.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/dynamicFonts/translation.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/BackButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://displayScenes/QuizMenu.gd" type="Script" id=5]
+[ext_resource path="res://sprites/bg/BG2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/buttons/QuizA.png" type="Texture" id=7]
+[ext_resource path="res://sprites/buttons/QuizB.png" type="Texture" id=8]
+[ext_resource path="res://sprites/buttons/QuizA_down.png" type="Texture" id=9]
+[ext_resource path="res://sprites/buttons/QuizB_down.png" type="Texture" id=10]
+[ext_resource path="res://scenes/MusicPlayer.tscn" type="PackedScene" id=11]
+
+[node name="QuizMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -388.0
+margin_top = -240.0
+margin_right = 388.0
+margin_bottom = 240.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 776.0
+margin_bottom = 156.0
+custom_fonts/font = ExtResource( 2 )
+text = "Quiz Time!"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 160.0
+margin_right = 776.0
+margin_bottom = 480.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 130.0
+margin_right = 386.0
+margin_bottom = 320.0
+
+[node name="QuizA" type="TextureButton" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 260.0
+margin_right = 256.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 3 )
+text = "Tebak Kata"
+align = 1
+valign = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 390.0
+margin_right = 646.0
+margin_bottom = 320.0
+
+[node name="QuizB" type="TextureButton" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 256.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 10 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 260.0
+margin_right = 256.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 3 )
+text = "Tebak Arti"
+align = 1
+valign = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+visible = false
+margin_left = 520.0
+margin_right = 776.0
+margin_bottom = 320.0
+
+[node name="QuizC" type="TextureButton" parent="VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_right = 256.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_top = 260.0
+margin_right = 256.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 3 )
+text = "Quiz Spesial"
+align = 1
+valign = 1
+
+[node name="Back" parent="." instance=ExtResource( 4 )]
+targetSceneName = "MainMenu"
+
+[node name="MusicPlayer" parent="." instance=ExtResource( 11 )]
+
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/VBoxContainer/QuizA" to="." method="_on_QuizA_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/VBoxContainer2/QuizB" to="." method="_on_QuizB_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/VBoxContainer3/QuizC" to="." method="_on_QuizC_button_down"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Harbor.wav-aad19eac6d8d8d8ee476ef72b77db60c.sample"
+
+[deps]
+
+source_file="res://Audio/Harbor.wav"
+dest_files=[ "res://.import/Harbor.wav-aad19eac6d8d8d8ee476ef72b77db60c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

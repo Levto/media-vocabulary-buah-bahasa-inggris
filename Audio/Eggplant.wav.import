@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Eggplant.wav-f6940b0ee6c8981ba5bc5e6148470cc7.sample"
+
+[deps]
+
+source_file="res://Audio/Eggplant.wav"
+dest_files=[ "res://.import/Eggplant.wav-f6940b0ee6c8981ba5bc5e6148470cc7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

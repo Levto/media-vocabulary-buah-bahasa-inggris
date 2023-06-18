@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/buttons/No_200x128.png" type="Texture" id=1]
+[ext_resource path="res://fonts/dynamicFonts/sentence.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/dynamicFonts/word.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/QuizBackOverlay.gd" type="Script" id=4]
+[ext_resource path="res://sprites/buttons/Yes_down_200x128.png" type="Texture" id=5]
+[ext_resource path="res://sprites/buttons/Yes_200x128.png" type="Texture" id=6]
+[ext_resource path="res://sprites/buttons/No_down_200x128.png" type="Texture" id=7]
+
+[node name="QuizBackOverlay" type="ColorRect"]
+self_modulate = Color( 0.0901961, 0.0901961, 0.0901961, 0.921569 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -502.5
+margin_top = -178.0
+margin_right = 502.5
+margin_bottom = 178.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1005.0
+margin_bottom = 156.0
+custom_fonts/font = ExtResource( 3 )
+text = "Quit the Quiz?"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 160.0
+margin_right = 1005.0
+margin_bottom = 224.0
+rect_min_size = Vector2( 0, 64 )
+custom_fonts/font = ExtResource( 2 )
+text = "Jawabanmu tidak akan tersimpan"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 228.0
+margin_right = 1005.0
+margin_bottom = 356.0
+alignment = 1
+
+[node name="Yes" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 244.0
+margin_right = 500.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 256, 128 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+expand = true
+stretch_mode = 3
+
+[node name="No" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 504.0
+margin_right = 760.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 256, 128 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+expand = true
+stretch_mode = 3
+
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/Yes" to="." method="_on_Yes_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/No" to="." method="_on_No_button_down"]

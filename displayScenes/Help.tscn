@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/BackButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/bg/BG1.png" type="Texture" id=2]
+[ext_resource path="res://fonts/ProductSans-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/dynamicFonts/word.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scenes/MusicPlayer.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 3 )
+
+[node name="Help" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -545.0
+margin_top = -287.5
+margin_right = 545.0
+margin_bottom = 287.5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_top = 57.0
+margin_right = 1090.0
+margin_bottom = 213.0
+custom_fonts/font = ExtResource( 4 )
+text = "Petunjuk Media"
+align = 1
+
+[node name="Help" type="Label" parent="VBoxContainer"]
+margin_top = 217.0
+margin_right = 1090.0
+margin_bottom = 518.0
+custom_fonts/font = SubResource( 1 )
+text = "1. Untuk menggunakan media ini, kamu dapat menekan tombol [START] untuk mulai
+belajar dari daftar kosakata Bahasa Inggris yang tersedia.
+2. Pilih salah satu kata dari daftar yang tersedia.
+3. Terdapat kata dalam Bahasa Inggris, terjemah, contoh kalimat, terjemah contoh
+kalimat, dan tombol [LISTEN] untuk mendengar cara pengucapan kata tersebut.
+4. Setelah kamu membaca seluruh kosakata yang tersedia, kamu dapat mengerjakan Quiz.
+5. Terdapat dua jenis Quiz, yaitu Quiz Tebak Kata dan Quiz Tebak Arti.
+6. Kamu akan mendapatkan medali dari skor yang kamu dapatkan pada setiap Quiz."
+
+[node name="Back" parent="." instance=ExtResource( 1 )]
+targetSceneName = "MainMenu"
+
+[node name="MusicPlayer" parent="." instance=ExtResource( 5 )]
